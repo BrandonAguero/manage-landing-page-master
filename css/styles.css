@@ -38,6 +38,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    padding-bottom: 10rem;
 }
 .header .header__img {
     position: absolute;
@@ -50,8 +52,8 @@ body {
     height: 38rem;
 }
 .header .header__img--second {
-    bottom: -10rem;
-    right: -15rem;
+    bottom: 1rem;
+    right: -20rem;
     width: 34rem;
     height: 34rem;
 }
@@ -67,6 +69,9 @@ body {
     height: 2rem;
 }
 .header .header__nav .header__nav--hamburger {
+    height: 2.3rem;
+}
+.header .header__nav .header__nav--hamclose {
     height: 2.3rem;
 }
 .header .header__section {
