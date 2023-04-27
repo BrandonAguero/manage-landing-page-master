@@ -11,3 +11,19 @@ function openMenu() {
     })
     menuOpen.classList.toggle("header__nav--inactivate");
 }
+
+//* Swipersjs
+
+const swiper = new Swiper('.main__section--swiper', {
+    direction: 'horizontal',
+    loop: false,
+    autoplay: {
+        delay: 2000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});

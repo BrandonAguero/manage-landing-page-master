@@ -15,8 +15,13 @@ Vary Light Gray: hsl(0, 0%, 98%)
 :root {
     --size-paragraphs: 1.6rem;
     --background-buttons: hsl(12, 88%, 59%);
+    --only-background-section: hsl(12, 88%, 59%);
+    --only-background-button: hsl(0, 0%, 98%);
+    --color-only-title: hsl(0, 0%, 98%);
+    --color-only-button: hsl(12, 88%, 59%);
     --color-buttons: hsl(0, 0%, 98%);
     --background-headings: hsl(13, 100%, 96%);
+    --background-footer: hsl(233, 12%, 13%);
     --size-headings: 3.5rem;
     --size-subtitles: 2.8rem;
     --color-headings: hsl(228, 39%, 23%);
@@ -26,7 +31,7 @@ Vary Light Gray: hsl(0, 0%, 98%)
     --line-paragraphs: 2.6rem;
     --background-card: hsl(0, 0%, 98%);
 }
-*, ::before{
+* {
     box-sizing: border-box;
 }
 html {
@@ -203,24 +208,19 @@ body {
     color: var(--color-headings);
     margin-bottom: 6rem;
 }
-.main .main__section--second {
+.main .main__section--swiper {
     width: 100%;
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory; 
-    gap: 4rem;
+    position: relative;
     padding: 0rem 2.5rem;
+    margin-bottom: 6rem;
 }
-.main .main__section--second .main__section--article {
+.main .main__section--swiper .swiper-wrapper .swiper-slide {
     display: flex;
     flex-direction: column;
-    min-width: 30rem;
-    min-height: 25rem;
     gap: 2rem;
     align-items: center;
-    scroll-snap-align: center;
 }
-.main .main__section--second .main__section--article:first-of-type div {
+.main .main__section--swiper .swiper-wrapper .swiper-slide:first-of-type div {
     background-image: url("../images/avatar-anisha.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -230,7 +230,7 @@ body {
     height: 8rem;
     border-radius: 50%;
 }
-.main .main__section--second .main__section--article:nth-of-type(2) div {
+.main .main__section--swiper .swiper-wrapper .swiper-slide:nth-of-type(2) div {
     background-image: url("../images/avatar-ali.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -240,7 +240,7 @@ body {
     height: 8rem;
     border-radius: 50%;
 }
-.main .main__section--second .main__section--article:nth-of-type(3) div {
+.main .main__section--swiper .swiper-wrapper .swiper-slide:nth-of-type(3) div {
     background-image: url("../images/avatar-richard.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -250,7 +250,7 @@ body {
     height: 8rem;
     border-radius: 50%;
 }
-.main .main__section--second .main__section--article:last-of-type div {
+.main .main__section--swiper .swiper-wrapper .swiper-slide:last-of-type div {
     background-image: url("../images/avatar-shanai.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -260,16 +260,145 @@ body {
     height: 8rem;
     border-radius: 50%;
 }
-.main .main__section--second .main__section--article h4 {
+.main .main__section--swiper .swiper-wrapper .swiper-slide h4 {
     color: var(--color-headings);
     font-size: var(--size-paragraphs);
     font-weight: bold;
 }
-.main .main__section--second .main__section--article p {
+.main .main__section--swiper .swiper-wrapper .swiper-slide p {
     font-size: var(--size-paragraphs);
     font-weight: lighter;
     color: var(--color-paragraphs);
     text-align: center;
+}
+.swiper-wrapper {
+    margin-bottom: 6rem;
+}
+.main .main__a {
+    background-color: var(--background-buttons);
+    color: var(--color-buttons);
+    text-decoration: none;
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: var(--size-paragraphs);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.main .main__section--third {
+    width: 100%;
+    background-color: var(--only-background-section);
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .main__section--third h3 {
+    color: var(--color-only-title);
+    font-size: var(--size-subtitles);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.main .main__section--third a {
+    background-color: var(--only-background-button);
+    color: var(--color-only-button);
+    text-decoration: none;
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: var(--size-paragraphs);
+    text-align: center;
+}
+.footer {
+    width: 100%;
+    background-color: var(--background-footer);
+}
+.footer .footer__form {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.footer .footer__form :first-of-type {
+    min-width: 20rem;
+    width: 50%;
+    max-width: 30rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: none;
+}
+.footer .footer__form :first-of-type::placeholder {
+    color: var(--color-paragraphs);
+    font-size: 1.5rem;
+}
+.footer .footer__form :last-of-type {
+    width: 7rem;
+    color: var(--color-buttons);
+    background-color: var(--background-buttons);
+    border: none;
+    border-radius: 2rem;
+}
+.footer .footer__section--first {
+    display: flex;
+    gap: 8rem;
+}
+.footer .footer__section--first ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem ;
+}
+.footer .footer__section--first ul li a {
+    text-decoration: none;
+    color: var(--color-buttons);
+    font-size: 1.5rem;
+}
+.footer .footer__section--second ul {
+    display: flex;
+}
+.footer .footer__section--second ul :first-of-type a {
+    background-image: url("../images/icon-facebook.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+}
+.footer .footer__section--second ul :nth-of-type(2) a {
+    background-image: url("../images/icon-youtube.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+}
+.footer .footer__section--second ul :nth-of-type(3) a {
+    background-image: url("../images/icon-twitter.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+}
+.footer .footer__section--second ul :nth-of-type(4) a {
+    background-image: url("../images/icon-pinterest.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+}
+.footer .footer__section--second ul :nth-of-type(5) a {
+    background-image: url("../images/icon-instagram.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
 }
 @media screen and (max-width: 799px) {
     .header .header__nav .header__nav--ul {
@@ -323,8 +452,4 @@ body {
     height: 3rem;
     padding: 1rem;
     text-align: center;
-} */
-
-.unico {
-    height: 100vh;
-}
+} *
