@@ -1,0 +1,24 @@
+body {
+    display: grid;
+    place-items: center;
+}
+/* .header .header__img--first {
+    top: -17rem;
+    right: -5rem;
+    width: 80rem;
+    height: 80rem;
+} */
+.header .header__nav .header__nav--ul {
+    gap: 5rem;
+}
+.header .header__nav .header__nav--ul li:hover a {
+    color: var(--color-paragraphs);
+}
+.header .header__nav .header__nav--a:hover {
+    opacity: 0.7;
+    box-shadow: 0rem 1rem 1rem -0.6rem var(--background-buttons);
+}
+.header .header__section .header__section--article a:hover {
+    opacity: 0.7;
+    box-shadow: 0rem 1rem 1rem -0.6rem var(--background-buttons);
+}

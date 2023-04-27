@@ -1,0 +1,56 @@
+.header .header__img--first {
+    top: -13rem;
+    right: -16rem;
+    width: 64rem;
+    height: 64rem;
+}
+.header .header__nav {
+    max-width: 110rem;
+    margin-bottom: 6rem;    
+}
+.header .header__nav .header__nav--ul {
+    display: flex;
+    gap: 2rem;
+}
+.header .header__nav .header__nav--ul li a {
+    color: var(--color-headings);
+    text-decoration: none;
+    font-size: var(--size-paragraphs);
+}
+.header .header__nav .header__nav--a {
+    display: inline-block;
+    background-color: var(--background-buttons);
+    color: var(--color-buttons);
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: var(--size-paragraphs);
+    text-decoration: none;
+    text-align: center;
+}
+.header .header__section {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 110rem;
+}
+.header .header__section .header__section--figure {
+    min-width: 40rem;
+    width: 58%;
+    max-width: 49rem;
+}
+.header .header__section .header__section--article {
+    min-width: 30rem;
+    width: 40%;
+    max-width: 36rem;
+    text-align: start;
+    align-items: flex-start;
+}
+.header .header__section .header__section--article a {
+    text-align: center;
+    padding: 1.5rem;
+}
+/* Elementos no visibles para tablets en adelante */
+.header .header__nav .header__nav--ham {
+    display: none;
+}

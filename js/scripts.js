@@ -1,13 +1,13 @@
-const iconHamburger = document.querySelector(".header__nav--hamburger");
-const iconHamburgerClose = document.querySelector(".header__nav--hamclose");
-const openCard = document.querySelectorAll(".header__inactivate");
+const iconHam = document.querySelectorAll(".header__nav--ham");
+const menuOpen = document.querySelector(".header__nav--ul");
 
-iconHamburger.addEventListener("click", openMenuOptions);
-iconHamburgerClose.addEventListener("click", openMenuOptions);
+iconHam.forEach((ham) => {
+    ham.addEventListener("click", openMenu);
+});
 
-function openMenuOptions() {
-    openCard.forEach(item => {
-        item.classList.toggle("header__inactivate");
+function openMenu() {
+    iconHam.forEach((icon) => {
+        icon.classList.toggle("header__nav--inactivate");
     })
-    iconHamburger.classList.toggle("header__inactivate");
+    menuOpen.classList.toggle("header__nav--inactivate");
 }

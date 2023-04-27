@@ -10,14 +10,24 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/tablets.css" media="(min-width: 800px)">
+        <link rel="stylesheet" href="./css/desktops.css" media="(min-width: 1300px)">
     </head>
     <body>
         <header class="header">
             <img class="header__img header__img--first" src="./images/bg-tablet-pattern.svg" alt="Tablet Pattern" />
             <nav class="header__nav">
                 <img class="header__nav--logo" src="./images/logo.svg" alt="Logo" />
-                <img class="header__nav--hamclose header__inactivate" src="./images/icon-close.svg" alt="Icon Hamburger Close" />
-                <img class="header__nav--hamburger" src="./images/icon-hamburger.svg" alt="Icon Hamburger" />
+                <ul class="header__nav--ul header__nav--inactivate">
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Carrers</a></li>
+                    <li><a href="#">Commnuty</a></li>
+                </ul>
+                <a class="header__nav--a" href="#">Get Started</a>
+                <img class="header__nav--hamclose header__nav--ham header__nav--inactivate" src="./images/icon-close.svg" alt="Icon Hamburger Close" />
+                <img class="header__nav--hamopen header__nav--ham" src="./images/icon-hamburger.svg" alt="Icon Hamburger" />
             </nav>
             <section class="header__section">
                 <figure class="header__section--figure">
@@ -30,23 +40,101 @@
                     </h1>
                     <p>
                         Manage makes it simple for software
-                        temas to plan day-to-day tasks while keeping 
+                        teams to plan day-to-day tasks while keeping 
                         the larger team goals in view.
                     </p>
                     <a class="header__section--btn" href="#">Get Started</a>
                 </article>
             </section>
             <img class="header__img header__img--second" src="./images/bg-tablet-pattern.svg" alt="Tablet Pattern" />
-            <div class="header__div header__inactivate">
-                <ul class="header__div--ul">
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Community</a></li>
-                </ul>
-            </div>
         </header>
+        <main class="main"> 
+            <section class="main__section main__section--first">
+                <article class="main__section--article">
+                    <h2>What's different about Manage?</h2>
+                    <p>
+                        Manage provides all the functionality your team needs, without the 
+                        complexity. Our software is tailor-made for modern digital product
+                        teams
+                    </p>
+                </article>
+                <section class="main__section--section">
+                    <article>
+                        <h3><span>01</span>Track company-wide progress</h3>
+                        <p>
+                            See how your day-to-day tasks fit into the wider vision.
+                            Go from tracking progress at the milestone level all the way done 
+                            to the smallest of details. Never lose sight of the bigger picture again.
+                        </p>
+                    </article>
+                    <article>
+                        <h3><span>02</span>Advanced built-in reports</h3>
+                        <p>
+                            Set internal delivery estimates and track progress toward company goals.
+                            Our customisable dashboard helps you build out the reoprts you need 
+                            to keep key stakeholders informed.
+                        </p>
+                    </article>
+                    <article>
+                        <h3><span>03</span>Everything you need in one place</h3>
+                        <p>
+                            Stop jumping from one service to another to communicate, store files, track
+                            tasks and share documents. Manage offers an all-in-one team productivity 
+                            solution.
+                        </p>
+                    </article>
+                </section>
+            </section>
+            <h3 class="main__section--h3">What they've said</h3>
+            <section class="main__section main__section--second">
+                <article class="main__section--article">
+                    <div></div>
+                    <h4>Anisha Li</h4>
+                    <p>
+                        "Mange has supercharged our team's workflow.
+                        The ability to maintain visibility on larger milestones
+                        at all times keeps everyone motivated."
+                    </p>
+                </article>
+                <article class="main__section--article">
+                    <div></div>
+                    <h4>Ali Bravo</h4>
+                    <p>
+                        "We have been able to cancel so many other subscriptions
+                        since using Manage. There is no more cross-channel confusion
+                        and everyone is much more focused"
+                    </p>
+                </article>
+                <article class="main__section--article">
+                    <div></div>
+                    <h4>Richard Watts</h4>
+                    <p>
+                        "Manage allows us to provide structure and process. It 
+                        keeps us organized and focused. I can't stop recommending them to everyone 
+                        I talk to!"
+                    </p>
+                </article>
+                <article class="main__section--article">
+                    <div></div>
+                    <h4>Shanai Gough</h4>
+                    <p>
+                        "Their software allows us to track, manage and collaborate on our projects from
+                        anywhere. It keeps the whole team insync without being intrusive."
+                    </p>
+                </article>
+            </section>
+        </main>
+        <div class="unico"></div>
         <script src="./js/scripts.js"></script>
     </body>
 </html>
+
+<!-- <div class="header__div header__inactivate">
+    <ul class="header__div--ul">
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Community</a></li>
+    </ul>
+</div> -->
