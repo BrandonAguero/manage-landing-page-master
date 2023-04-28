@@ -13,7 +13,6 @@ function openMenu() {
 }
 
 //* Swipersjs
-
 const swiper = new Swiper('.main__section--swiper', {
     direction: 'horizontal',
     loop: false,
