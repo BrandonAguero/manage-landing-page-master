@@ -70,21 +70,24 @@
 .main .main__section--third .main__section--article {   
     flex-direction: row;
     justify-content: space-between;
+    max-width: 110rem;
 }
-.footer {
+.footer .footer__div {
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     grid-template-rows: repeat(2, minmax(min-content, max-content));
     column-gap: 2rem;
+    width: 90%;
+    justify-items: stretch;
 }
-.footer .footer__figure {
+.footer .footer__div--figure {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
-.footer .footer__section--first {
+.footer .footer__div--section:first-of-type {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
 }
-.footer .footer__section--second ul {
+.footer .footer__div--section:last-of-type ul {
     gap: 2rem;
 }
 /* Elementos no visibles para tablets en adelante */
